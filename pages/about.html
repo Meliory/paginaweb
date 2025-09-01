@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Albert Sánchez - Sobre mí</title>
+    <link rel="icon" type="image/x-icon" href="../images/Logo_ELYA_PNG_Blanco.avif">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Montserrat:wght@400;600;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/about.css">
+    <script src="../scripts/translations.js"></script>
     <script src="../scripts/stars.js"></script>
+    <script src="../scripts/hamburger.js"></script>
 </head>
 <body>
     <!-- Elementos decorativos -->
@@ -19,30 +22,83 @@
 
     <header>
         <nav>
-            <a href="../index.html"><img src="../images/Logo_ELYA_PNG_Blanco.png" alt="Logo personal" class="nav-logo"></a>
-            <div class="nav-links">
-                <a href="index.html">Inicio</a>
-                <a href="proyectos.html">Proyectos</a>
-                <a href="juegos.html">Juegos</a>
+            <a href="../index.html"><img src="../images/Logo_ELYA_PNG_Blanco.avif" alt="Logo personal" class="nav-logo"></a>
+            <div class="nav-right">
+                <div class="nav-links">
+                    <a href="about.html" data-translate="nav.about" >Sobre mí</a>
+                    <a href="projects.html" data-translate="nav.projects">Proyectos</a>
+                    <a href="contact.html" data-translate="nav.contact">Contacto</a>
+                </div>
+                <div class="language-selector">
+                    <button class="language-button">
+                        <span>ES</span>
+                    </button>
+                    <div class="language-dropdown">
+                        <a href="#" class="language-option current" data-lang="es">
+                            <span>Español</span>
+                        </a>
+                        <a href="#" class="language-option" data-lang="ca">
+                            <span>Català</span>
+                        </a>
+                        <a href="#" class="language-option" data-lang="en">
+                            <span>English</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Menú Hamburguesa -->
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </nav>
+        
+        <!-- Overlay del menú móvil -->
+        <div class="mobile-menu-overlay"></div>
+        
+        <!-- Menú móvil -->
+        <div class="mobile-menu">
+            <div class="mobile-nav-links">
+                <a href="about.html" data-translate="nav.about">Sobre mí</a>
+                <a href="projects.html" data-translate="nav.projects">Proyectos</a>
+                <a href="contact.html" data-translate="nav.contact">Contacto</a>
+            </div>
+            
+            <div class="mobile-language-section">
+                <div class="mobile-language-title" data-translate="common.language">Idioma</div>
+                <div class="mobile-language-options">
+                    <a href="#" class="mobile-language-option current" data-lang="es">
+                        <span>Español</span>
+                    </a>
+                    <a href="#" class="mobile-language-option" data-lang="ca">
+                        <span>Català</span>
+                    </a>
+                    <a href="#" class="mobile-language-option" data-lang="en">
+                        <span>English</span>
+                    </a>
+                </div>
+            </div>
+        </div>
     </header>
 
     <main>
+
         <!-- Hero Personal -->
         <section class="personal-hero base-section">
             <div class="hero-content">
                 <div class="hero-image">
-                    <img src="../images/foto-perfil.jpg" alt="Albert Sánchez" class="hero-profile-image">
+                    <img src="../images/foto-perfil.webp" alt="Albert Sánchez" class="hero-profile-image">
                 </div>
                 <div class="hero-text">
-                    <h1 class="hero-name">Albert Sánchez</h1>
-                    <p class="hero-nicknames">Meliory & Mel 🦋🎸</p>
-                    <p class="hero-role">Programador de videojuegos, compositor y escritor</p>
+                    <h1 class="hero-name" data-translate="about.name">Albert Sánchez</h1>
+                    <p class="hero-nicknames" data-translate="about.alias">Meliory & Mel 🦋🎸</p>
+                    <p class="hero-role" data-translate="about.profession">Programador de videojuegos, compositor y escritor</p>
                     <div class="hero-quote">
-                        <p>"Tal vez tengas razón, Flap. Incluso si no soy quien se supone que debo ser, me gusta quién soy ahora" 🐦</p>
+                        <p data-translate="about.quote">"Tal vez tengas razón, Flap. Incluso si no soy quien se supone que debo ser, me gusta quién soy ahora" 🐦</p>
                         <div class="hero-quote-author">
-                            <span>~ Hunter, The Owl House</span>
+                            <span data-translate="about.quoteSource">~ Hunter, The Owl House</span>
                         </div>
                     </div>
                 </div>
@@ -51,77 +107,77 @@
 
         <!-- Mi Historia -->
         <section class="my-story base-section">
-            <h2 class="section-title">Mi Historia</h2>
+            <h2 class="section-title" data-translate="about.historyTitle">Mi Historia</h2>
             <div class="story-content">
                 <div class="story-text">
-                    <p class="intro-text">¡Hola! Soy <strong>Albert Sánchez</strong>, también conocido en internet como <strong>Meliory</strong> o <strong>Mel</strong>. Tengo 21 años, estudio Diseño y Desarrollo de Videojuegos y vivo en <strong>Girona, España</strong>.</p>
+                    <p class="intro-text" data-translate="about.historyIntro">¡Hola! Soy <strong>Albert Sánchez</strong>, también conocido en internet como <strong>Meliory</strong> o <strong>Mel</strong>. Tengo 21 años, estudio Diseño y Desarrollo de Videojuegos y vivo en <strong>Girona, España</strong>.</p>
                     
-                    <p>Soy un <strong>programador de videojuegos</strong> y <strong>compositor musical</strong>. Me gusta aprender y ser creativo, programar las cosas que me vienen en mente o plasmar en la música diferentes emociones que puedo sentir. Además, de vez en cuando, me gusta escribir alguna historia o interpretar algún personaje.</p>
+                    <p data-translate="about.historyText1">Soy un <strong>programador de videojuegos</strong> y <strong>compositor musical</strong>. Me gusta aprender y ser creativo, programar las cosas que me vienen en mente o plasmar en la música diferentes emociones que puedo sentir. Además, de vez en cuando, me gusta escribir alguna historia o interpretar algún personaje.</p>
 
-                    <p>Siempre he sido un fanático de los videojuegos indie, llenos de historia y sentimiento; aquellos que me hacen pensar o me hacen pasar un buen rato. Juegos de puzzles, narrativos o interactivos son algunos de mis favoritos.</p>
+                    <p data-translate="about.historyText2">Siempre he sido un fanático de los videojuegos indie, llenos de historia y sentimiento; aquellos que me hacen pensar o me hacen pasar un buen rato. Juegos de puzzles, narrativos o interactivos son algunos de mis favoritos.</p>
 
-                    <p>A nivel músical toco la guitarra desde los 12 años, siendo la rumba, cantautor, rock español y rock japonés mis géneros favoritos. También toco un poco el piano y el cajón flamenco.</p>
+                    <p data-translate="about.historyText3">A nivel músical toco la guitarra desde los 12 años, siendo la rumba, cantautor, rock español y rock japonés mis géneros favoritos. También toco un poco el piano y el cajón flamenco.</p>
 
-                    <p>Finalmente, soy administrador del <a href="https://kilam.net" target="_blank" class="link-highlight"><strong>grupo KILAM</strong></a>, un grupo de creación de eventos de Minecraft para comunidades y streamers.</p>
+                    <p data-translate="about.historyText4">Finalmente, soy administrador del <a href="https://kilam.net" target="_blank" class="link-highlight"><strong>grupo KILAM</strong></a>, un grupo de creación de eventos de Minecraft para comunidades y streamers.</p>
                 </div>
                 <div class="story-images">
-                    <img src="../images/mi-historia.jpg" alt="Desarrollando" class="story-image">
+                    <img src="../images/mi-historia.webp" alt="Desarrollando" class="story-image">
                 </div>
             </div>
         </section>
 
         <!-- Conocimientos Técnicos -->
         <section class="tech-skills base-section">
-            <h2 class="section-title">Conocimientos técnicos</h2>
+            <h2 class="section-title" data-translate="about.techSkillsTitle">Conocimientos técnicos</h2>
             <div class="tech-skills-grid">
                 <div class="skill-category-compact">
                     <div class="skill-info">
-                        <h3>Motores</h3>
+                        <h3 data-translate="about.engines">Motores</h3>
                         <div class="skill-list">Unity, Unreal Engine, Godot</div>
                     </div>
                     <div class="skill-icons">
-                        <img src="https://skillicons.dev/icons?i=unity" alt="Motores de videojuegos" />
-                        <img src="https://skillicons.dev/icons?i=unreal" alt="Motores de videojuegos" />
-                        <img src="https://skillicons.dev/icons?i=godot" alt="Motores de videojuegos" />
+                        <img src="../images/unity.webp" alt="Unity" />
+                        <img src="../images/unreal.webp" alt="Unreal Engine" />
+                        <img src="../images/godot.webp" alt="Godot" />
                     </div>
                 </div>
                 
                 <div class="skill-category-compact">
                     <div class="skill-info">
-                        <h3>Programación</h3>
+                        <h3 data-translate="about.programming">Programación</h3>
                         <div class="skill-list">C++, C#, HTML, JS, CSS, PHP, Java</div>
                     </div>
                     <div class="skill-icons">
-                        <img src="https://skillicons.dev/icons?i=cpp" alt="Lenguajes de programación" />
-                        <img src="https://skillicons.dev/icons?i=cs" alt="Lenguajes de programación" />
-                        <img src="https://skillicons.dev/icons?i=html" alt="Lenguajes de programación" />
-                        <img src="https://skillicons.dev/icons?i=js" alt="Lenguajes de programación" />
-                        <img src="https://skillicons.dev/icons?i=css" alt="Lenguajes de programación" />
-                        <img src="https://skillicons.dev/icons?i=php" alt="Lenguajes de programación" />
-                        <img src="https://skillicons.dev/icons?i=java" alt="Lenguajes de programación" />
+                        <img src="../images/cplusplus.webp" alt="C++" />
+                        <img src="../images/csharp.webp" alt="C#" />
+                        <img src="../images/html.webp" alt="HTML" />
+                        <img src="../images/javascript.webp" alt="JavaScript" />
+                        <img src="../images/css.webp" alt="CSS" />
+                        <img src="../images/php.webp" alt="PHP" />
+                        <img src="../images/java.webp" alt="Java" />
                     </div>
                 </div>
                 
                 <div class="skill-category-compact">
                     <div class="skill-info">
-                        <h3>Herramientas</h3>
+                        <h3 data-translate="about.tools">Herramientas</h3>
                         <div class="skill-list">Azure, Blender, Cubase, Idea, Illustrator, Photoshop, Visual Studio</div>
                     </div>
                     <div class="skill-icons">
-                        <img src="https://skillicons.dev/icons?i=azure" alt="Herramientas" />
-                        <img src="https://skillicons.dev/icons?i=blender" alt="Herramientas" />
-                        <img src="../images/cubase.png" alt="Herramientas" />
-                        <img src="https://skillicons.dev/icons?i=idea" alt="Herramientas" />
-                        <img src="https://skillicons.dev/icons?i=illustrator" alt="Herramientas" />
-                        <img src="https://skillicons.dev/icons?i=photoshop" alt="Herramientas" />
-                        <img src="https://skillicons.dev/icons?i=vscode" alt="Herramientas" />
+                        <img src="../images/azure.webp" alt="Azure" />
+                        <img src="../images/blender.webp" alt="Blender" />
+                        <img src="../images/cubase.webp" alt="Cubase" />
+                        <img src="../images/idea.webp" alt="IDEA" />
+                        <img src="../images/illustrator.webp" alt="Illustrator" />
+                        <img src="../images/photoshop.webp" alt="Photoshop" />
+                        <img src="../images/visualstudio.webp" alt="Visual Studio" />
                     </div>
                 </div>
             </div>
         </section>
 
         <section class="social-section base-section">
-            <h2 class="section-title">Mis redes sociales</h2>
+            <h2 class="section-title" data-translate="about.socialTitle">Mis redes sociales</h2>
             <div class="social-text-grid">
                 <a href="https://github.com/Meliory" target="_blank" class="social-text-item">
                     <svg class="social-icon-text" viewBox="0 0 24 24">
@@ -186,113 +242,113 @@
         </section>
 
         <section class="beyond-code base-section">
-            <h2 class="section-title">Más allá del código</h2>
+            <h2 class="section-title" data-translate="about.beyondCodeTitle">Más allá del código</h2>
             <div class="beyond-intro">
-                <p>Estas son algunas de mis inspiraciones y gustos que influyen en mi trabajo creativo. Desde videojuegos que me marcaron, música que acompaña en mi vida, series que me inspiran...</p>
+                <p data-translate="about.beyondCodeDesc">Estas son algunas de mis inspiraciones y gustos que influyen en mi trabajo creativo. Desde videojuegos que me marcaron, música que acompaña en mi vida, series que me inspiran...</p>
             </div>
             
             <div class="inspirations-grid">
                 <div class="inspiration-item"> 
                     <a href="https://store.steampowered.com/app/1574820/Until_Then" target="_blank">
-                        <img src="../images/until-then.png" alt="Until Then" class="inspiration-image">
+                        <img src="../images/until-then.webp" alt="Until Then" class="inspiration-image">
                         <h4>Until Then</h4>
-                        <span class="inspiration-type">Videojuego</span>
+                        <span class="inspiration-type" data-translate="about.videogame">Videojuego</span>
                     </a>
                 </div>
                 
                 <div class="inspiration-item">
                     <a href="https://store.steampowered.com/app/1150690/Omori" target="_blank">
-                        <img src="../images/omori.png" alt="Omori" class="inspiration-image">
+                        <img src="../images/omori.webp" alt="Omori" class="inspiration-image">
                         <h4>Omori</h4>
-                        <span class="inspiration-type">Videojuego</span>
+                        <span class="inspiration-type" data-translate="about.videogame">Videojuego</span>
                     </a>
                 </div>
 
                 <div class="inspiration-item">
                     <a href="https://www.minecraft.net/" target="_blank">
-                        <img src="../images/minecraft.jpg" alt="Minecraft" class="inspiration-image">
+                        <img src="../images/minecraft.webp" alt="Minecraft" class="inspiration-image">
                         <h4>Minecraft</h4>
-                        <span class="inspiration-type">Videojuego</span>
+                        <span class="inspiration-type" data-translate="about.videogame">Videojuego</span>
                     </a>
                 </div>
 
                 <div class="inspiration-item">
                     <a href="https://store.steampowered.com/app/1001250/Cult_of_the_Lamb" target="_blank">
-                        <img src="../images/cult-lamb.jpg" alt="Cult of the Lamb" class="inspiration-image">
+                        <img src="../images/cult-lamb.webp" alt="Cult of the Lamb" class="inspiration-image">
                         <h4>Cult of the Lamb</h4>
-                        <span class="inspiration-type">Videojuego</span>
+                        <span class="inspiration-type" data-translate="about.videogame">Videojuego</span>
                     </a>
                 </div>
 
                 <div class="inspiration-item">
                     <a href="https://slimerancher.com/" target="_blank">
-                        <img src="../images/slime-rancher.jpeg" alt="Slime Rancher" class="inspiration-image">
+                        <img src="../images/slime-rancher.webp" alt="Slime Rancher" class="inspiration-image">
                         <h4>Slime Rancher</h4>
-                        <span class="inspiration-type">Videojuego</span>
+                        <span class="inspiration-type" data-translate="about.videogame">Videojuego</span>
                     </a>
                 </div>
 
                 <div class="inspiration-item">
                     <a href="https://open.spotify.com/intl-es/artist/4Byu6VBhuMYzcoIUrIyLuL?si=J_SOdHm3RVKCO3TbW-jzlw" target="_blank">
-                        <img src="../images/kanka.jpeg" alt="El Kanka" class="inspiration-image">
+                        <img src="../images/kanka.webp" alt="El Kanka" class="inspiration-image">
                         <h4>El Kanka</h4>
-                        <span class="inspiration-type">Música</span>
+                        <span class="inspiration-type" data-translate="about.music">Música</span>
                     </a>
                 </div>
 
                 <div class="inspiration-item">
                     <a href="https://open.spotify.com/intl-es/artist/3Znu3IpegNZzamLA9vRsE0?si=KS202jHISsyHsvOIhbVZvg" target="_blank">
-                        <img src="../images/niño-hipoteca.jpg" alt="El Niño de la Hipoteca" class="inspiration-image">
+                        <img src="../images/niño-hipoteca.webp" alt="El Niño de la Hipoteca" class="inspiration-image">
                         <h4>El Niño de la Hipoteca</h4>
-                        <span class="inspiration-type">Música</span>
+                        <span class="inspiration-type" data-translate="about.music">Música</span>
                     </a>
                 </div>
 
                 <div class="inspiration-item">
                     <a href="https://open.spotify.com/intl-es/artist/5soMpG6E6oApEiCZgrWeVz?si=c1O6drtST0OOYLTIDnKnEA" target="_blank">
-                        <img src="../images/rozalen.png" alt="Rozalén" class="inspiration-image">
+                        <img src="../images/rozalen.webp" alt="Rozalén" class="inspiration-image">
                         <h4>Rozalén</h4>
-                        <span class="inspiration-type">Música</span>
+                        <span class="inspiration-type" data-translate="about.music">Música</span>
                     </a>
                 </div>
 
                 <div class="inspiration-item">
                     <a href="https://open.spotify.com/intl-es/artist/0aRqEPPTtQd3pGuB4tJxVw?si=p08iApT_QuiY0mCkQENyAg" target="_blank">
-                        <img src="../images/centimillimental.png" alt="Centimillimental" class="inspiration-image">
+                        <img src="../images/centimillimental.webp" alt="Centimillimental" class="inspiration-image">
                         <h4>Centimillimental</h4>
-                        <span class="inspiration-type">Música</span>
+                        <span class="inspiration-type" data-translate="about.music">Música</span>
                     </a>
                 </div>
 
                 <div class="inspiration-item">
                     <a href="https://open.spotify.com/intl-es/artist/1tZ99AnqyjgrmPwLfGU5eo?si=6ucug_DsSz6EI5LhYi6IAA" target="_blank">
-                        <img src="../images/fito.jpg" alt="Fito y Fitipaldis" class="inspiration-image">
+                        <img src="../images/fito.webp" alt="Fito y Fitipaldis" class="inspiration-image">
                         <h4>Fito y Fitipaldis</h4>
-                        <span class="inspiration-type">Música</span>
+                        <span class="inspiration-type" data-translate="about.music">Música</span>
                     </a>
                 </div>
 
                 <div class="inspiration-item">
                     <a href="https://es.wikipedia.org/wiki/Given_(manga)" target="_blank">
-                        <img src="../images/given.jpg" alt="Given" class="inspiration-image">
+                        <img src="../images/given.webp" alt="Given" class="inspiration-image">
                         <h4>Given</h4>
-                        <span class="inspiration-type">Anime/Música</span>
+                        <span class="inspiration-type" data-translate="about.animeMusic">Anime/Música</span>
                     </a>
                 </div>
 
                 <div class="inspiration-item">
                     <a href="https://es.wikipedia.org/wiki/The_Owl_House" target="_blank">
-                        <img src="../images/owl-house.png" alt="The Owl House" class="inspiration-image">
+                        <img src="../images/owl-house.webp" alt="The Owl House" class="inspiration-image">
                         <h4>The Owl House</h4>
-                        <span class="inspiration-type">Serie</span>
+                        <span class="inspiration-type" data-translate="about.series">Serie</span>
                     </a>
                 </div>
                 
                 <div class="inspiration-item">
                     <a href="https://es.wikipedia.org/wiki/Steven_Universe" target="_blank">
-                        <img src="../images/steven-universe.jpg" alt="Steven Universe" class="inspiration-image">
+                        <img src="../images/steven-universe.webp" alt="Steven Universe" class="inspiration-image">
                         <h4>Steven Universe</h4>
-                        <span class="inspiration-type">Serie/Música</span>
+                        <span class="inspiration-type" data-translate="about.seriesMusic">Serie/Música</span>
                     </a>
                 </div>
 
@@ -321,8 +377,8 @@
                     </svg>
                 </a>
             </div>
-            <p class="footer-contact">📧 Contacto: <a href="mailto:asanchezsa04@gmail.com">asanchezsa04@gmail.com</a></p>
-            <p class="copyright">© 2024 Albert Sánchez. Todos los derechos reservados.</p>
+            <p class="footer-contact" data-translate="common.contact">📧 Contacto: <a href="mailto:asanchezsa04@gmail.com">asanchezsa04@gmail.com</a></p>
+            <p class="copyright" data-translate="common.copyright">© 2024 Albert Sánchez. Todos los derechos reservados.</p>
         </div>
     </footer>
 

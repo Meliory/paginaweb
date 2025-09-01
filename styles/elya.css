@@ -176,16 +176,20 @@ nav {
 
 /* Contenido principal */
 main {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 2rem 1rem;
 }
 
 /* Estilos generales de texto */
 p {
-    text-align: center;
+    text-align: justify;
     line-height: 1.6;
     margin-bottom: 1rem;
+}
+
+.date {
+    text-align: center;
 }
 
 h1, h2, h3, h4, h5 {
@@ -230,7 +234,7 @@ h4 {
 
 /* Secciones del proyecto */
 .project-section {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto 2rem auto;
     padding: 1.5rem 2rem;
     background-color: var(--color-blue-zone2);
@@ -262,7 +266,7 @@ h4 {
 }
 
 .project-section2 {
-    max-width: 800px;
+    /*max-width: 800px;*/
     margin: 0 auto 1.5rem auto;
     padding: 1.2rem 2rem;
     background-color: var(--color-blue-zone3);
@@ -278,7 +282,7 @@ h4 {
 }
 
 .project-section3 {
-    max-width: 800px;
+    /*max-width: 800px;*/
     margin: 0 auto 1rem auto;
     padding: 1rem 1.5rem;
     background-color: var(--color-blue-zone4);

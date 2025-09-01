@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Albert Sánchez - ELYA</title>
+    <link rel="icon" type="image/x-icon" href="../images/Logo_ELYA_PNG_Blanco.avif">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Montserrat:wght@400;600;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/elya.css">
+    <script src="../scripts/translations.js"></script>
     <script src="../scripts/stars.js"></script>
+    <script src="../scripts/hamburger.js"></script>
 </head>
 <body>
     <!-- Elementos decorativos -->
@@ -18,31 +22,86 @@
 
     <header>
         <nav>
-            <a href="../index.html"><img src="../images/Logo_ELYA_PNG_Blanco.png" alt="Logo personal" class="nav-logo"></a>
-            <div class="nav-links">
-                <a href="#proyecto">Proyecto</a>
-                <a href="#libro">Novela</a>
-                <a href="#disco">Disco</a>
-                <a href="#juego">Videojuego</a>
+            <a href="../index.html"><img src="../images/Logo_ELYA_PNG_Blanco.avif" alt="Logo personal" class="nav-logo"></a>
+            <div class="nav-right">
+                <div class="nav-links">
+                    <a href="about.html" data-translate="nav.about">Sobre mí</a>
+                    <a href="projects.html" data-translate="nav.projects">Proyectos</a>
+                    <a href="contact.html" data-translate="nav.contact">Contacto</a>
+                </div>
+                <div class="language-selector">
+                    <button class="language-button">
+                        <span>ES</span>
+                    </button>
+                    <div class="language-dropdown">
+                        <a href="#" class="language-option current" data-lang="es">
+                            <span>Español</span>
+                        </a>
+                        <a href="#" class="language-option" data-lang="ca">
+                            <span>Català</span>
+                        </a>
+                        <a href="#" class="language-option" data-lang="en">
+                            <span>English</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Menú Hamburguesa -->
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </nav>
+        
+        <!-- Overlay del menú móvil -->
+        <div class="mobile-menu-overlay"></div>
+        
+        <!-- Menú móvil -->
+        <div class="mobile-menu">
+            <div class="mobile-nav-links">
+                <a href="about.html" data-translate="nav.about">Sobre mí</a>
+                <a href="projects.html" data-translate="nav.projects">Proyectos</a>
+                <a href="contact.html" data-translate="nav.contact">Contacto</a>
+            </div>
+            
+            <div class="mobile-language-section">
+                <div class="mobile-language-title">Idioma</div>
+                <div class="mobile-language-options">
+                    <a href="#" class="mobile-language-option current" data-lang="es">
+                        <span>Español</span>
+                    </a>
+                    <a href="#" class="mobile-language-option" data-lang="ca">
+                        <span>Català</span>
+                    </a>
+                    <a href="#" class="mobile-language-option" data-lang="en">
+                        <span>English</span>
+                    </a>
+                </div>
+            </div>
+        </div>
     </header>
 
     <main>
-        <h1 class="page-title">Entre Lienzos y Acordes</h1>
-        <p class="subtitle">Un proyecto que fusiona narrativa, música y desarrollo de videojuegos</p>
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title" data-translate="elya.heroTitle">Entre Lienzos y Acordes</h1>
+                <p class="hero-subtitle" data-translate="elya.heroSubtitle">Un proyecto que fusiona narrativa, música y desarrollo de videojuegos</p>
+            </div>
+        </section>
 
         <!-- Introducción del proyecto -->
         <section id="proyecto" class="project-section">
-            <h2>Introducción del Proyecto</h2>
+            <h2 data-translate="elya.projectIntroTitle">Introducción del Proyecto</h2>
             <div class="introduction-content">
-                <img src="../images/Logo_ELYA_PNG_Blanco.png" alt="Logo del juego">
+                <img src="../images/Logo_ELYA_PNG_Blanco.avif" alt="Logo del juego">
                 <div>
-                    <p><strong>Entre Lienzos y Acordes</strong> es el proyecto central de mi Trabajo de Fin de Grado, un esfuerzo creativo dividido en tres partes claramente diferenciadas pero intrínsecamente conectadas. Cada una de estas partes contribuye de manera única a la creación de un universo narrativo y artístico cohesivo:</p>
+                    <p><strong data-translate="elya.heroTitle">Entre Lienzos y Acordes</strong> <span data-translate="elya.projectIntroText">es el proyecto central de mi Trabajo de Fin de Grado, un esfuerzo creativo dividido en tres partes claramente diferenciadas pero intrínsecamente conectadas. Cada una de estas partes contribuye de manera única a la creación de un universo narrativo y artístico cohesivo:</span></p>
                     <ul>
-                        <li><strong>Novela:</strong> El corazón de <em>Entre Lienzos y Acordes</em> es la creación de una novela que cuenta la historia principal del proyecto. Este proceso de escritura, que ha evolucionado a lo largo de un año, comenzó como un ejercicio en una asignatura universitaria y se ha transformado en uno de los pilares fundamentales de mi trabajo.</li>
-                        <li><strong>Disco:</strong> La música es un componente vital de este proyecto. En paralelo a la novela, he compuesto un disco de 9 a 10 canciones, dividido en dos partes. La primera parte presenta canciones interpretadas por los personajes de la novela, reflejando sus emociones y conflictos. La segunda parte consiste en piezas musicales que acompañan escenas clave de la historia, enriqueciendo la experiencia narrativa.</li>
-                        <li><strong>Demo de videojuego:</strong> Para culminar el proyecto, he fusionado la narrativa de la novela con la música del disco para desarrollar una demo de videojuego. Esta demo permite a los usuarios explorar el universo de <em>Entre Lienzos y Acordes</em> de manera interactiva, sumergiéndose en la historia y la música que la componen.</li>
+                        <li><strong>Novela:</strong> <span data-translate="elya.novelPoint">El corazón de Entre Lienzos y Acordes es la creación de una novela que cuenta la historia principal del proyecto. Este proceso de escritura, que ha evolucionado a lo largo de un año, comenzó como un ejercicio en una asignatura universitaria y se ha transformado en uno de los pilares fundamentales de mi trabajo.</span></li>
+                        <li><strong>Disco:</strong> <span data-translate="elya.albumPoint">La música es un componente vital de este proyecto. En paralelo a la novela, he compuesto un disco de 9 a 10 canciones, dividido en dos partes. La primera parte presenta canciones interpretadas por los personajes de la novela, reflejando sus emociones y conflictos. La segunda parte consiste en piezas musicales que acompañan escenas clave de la historia, enriqueciendo la experiencia narrativa.</span></li>
+                        <li><strong>Demo de videojuego:</strong> <span data-translate="elya.gamePoint">Para culminar el proyecto, he fusionado la narrativa de la novela con la música del disco para desarrollar una demo de videojuego. Esta demo permite a los usuarios explorar el universo de Entre Lienzos y Acordes de manera interactiva, sumergiéndose en la historia y la música que la componen.</span></li>
                     </ul>
                 </div>
             </div>
@@ -50,79 +109,79 @@
 
         <!-- Zona de Descargas -->
         <section class="download-zone project-section">
-            <h2>Zona de Descargas</h2>
+            <h2 data-translate="elya.downloadZoneTitle">Zona de Descargas</h2>
             <section id="libro" class="download-book project-section2">
-                <h3>✎ㅤLibroㅤ♡</h3>
+                <h3 data-translate="elya.bookTitle">✎ㅤLibroㅤ♡</h3>
                 <section class="project-section3 sinopsis">
-                    <h4>Sinopsis</h4>
-                    <p>Ruby, una joven baterista, y Aura, una artista en formación, se enfrentan a los retos de la adolescencia mientras buscan su lugar en el mundo. A través de la música y el arte, ambas intentan reconciliar sus sueños con la realidad que las rodea. En medio de luchas internas, amistades profundas y la búsqueda de identidad, Ruby y Aura descubrirán que la verdadera armonía radica en aceptar quienes son, sin dejar de lado lo que aman.</p>
-                    <p>"Entre lienzos y acordes" es una historia sobre el poder transformador del arte y la música en la vida de dos almas jóvenes.</p>
+                    <h4 data-translate="elya.synopsisTitle">Sinopsis</h4>
+                    <p data-translate="elya.synopsisText1">Ruby, una joven baterista, y Aura, una artista en formación, se enfrentan a los retos de la adolescencia mientras buscan su lugar en el mundo. A través de la música y el arte, ambas intentan reconciliar sus sueños con la realidad que las rodea. En medio de luchas internas, amistades profundas y la búsqueda de identidad, Ruby y Aura descubrirán que la verdadera armonía radica en aceptar quienes son, sin dejar de lado lo que aman.</p>
+                    <p data-translate="elya.synopsisText2">"Entre lienzos y acordes" es una historia sobre el poder transformador del arte y la música en la vida de dos almas jóvenes.</p>
                 </section>
                 <section class="project-section3">
-                    <h4>Edición en castellano</h4>
-                    <h5>Leer digitalmente:</h5>
+                    <h4 data-translate="elya.spanishEdition">Edición en castellano</h4>
+                    <h5 data-translate="elya.readDigitally">Leer digitalmente:</h5>
                     <div class="button-container">
                         <button id="boton-wattpad-es" class="download-button" data-url="https://www.wattpad.com/story/375717163-entre-lienzos-y-acordes">Wattpad</button>
                         <button id="boton-inkspired-es" class="download-button" data-url="https://getinkspired.com/es/story/473979/entre-lienzos-y-acordes/">Inkspired</button>
                     </div>
-                    <h5>Descargar Libro electrónico:</h5>
+                    <h5 data-translate="elya.downloadEbook">Descargar Libro electrónico:</h5>
                     <div class="button-container">
                         <button id="boton-epub-es" class="download-button" data-file="./books/Entre Lienzos y Acordes - Albert Sánchez.epub" data-filename="Entre Lienzos y Acordes - Albert Sánchez.epub">.EPUB</button>
                         <button id="boton-azw3-es" class="download-button" data-file="./books/Entre Lienzos y Acordes - Albert Sánchez.azw3" data-filename="Entre Lienzos y Acordes - Albert Sánchez.azw3">.AZW3</button>
                     </div>
-                    <h5>Comprar copia física (7€)*:</h5>
+                    <h5 data-translate="elya.buyPhysical">Comprar copia física (7€)*:</h5>
                     <div class="button-container">
                         <button id="boton-amazon-es" class="download-button" data-url="https://www.amazon.es/dp/B0DFYBD946/ref=sr_1_1?crid=2F24FK5AFGE79&dib=eyJ2IjoiMSJ9.Cw3ZmDwH5I2y192a14lrRemhDlJuCebRqmdUtaA5k-g.HecwOUwMWMAKjF6FPB_5WWpbYYYKKErjJ1usQEAEbEc&dib_tag=se&keywords=entre+lienzos+y+acordes&qid=1725386932&sprefix=%2Caps%2C101&sr=8-1">Amazon</button>
                     </div>
                 </section>
                 <section class="project-section3">
-                    <h4>Edición en catalán</h4>
-                    <p>Salida prevista en: <strong>Próximamente</strong></p>
+                    <h4 data-translate="elya.catalanEdition">Edición en catalán</h4>
+                    <p class="date"><span data-translate="elya.expectedRelease">Salida prevista en:</span> <strong data-translate="elya.soon">Próximamente</strong></p>
                     <div class="button-container">
-                        <button disabled class="download-button">No disponible</button>
+                        <button disabled class="download-button" data-translate="elya.notAvailable">No disponible</button>
                     </div>
                 </section>
-                <p><em>*El precio puede variar según la política de Amazon, además que el envío no está incluido.</em></p>
+                <p><em data-translate="elya.priceNote">*El precio puede variar según la política de Amazon, además que el envío no está incluido.</em></p>
             </section>
 
             <!-- Disco -->
             <section id="disco" class="download-disc project-section2">
-                <h3>𝄞
+                <h3 data-translate="elya.soundtrackTitle">𝄞
                     ㅤSoundtrack Originalㅤ
                     ♪
                 </h3>
                 <section class="project-section3">
-                    <h4>Álbum musical</h4>
-                    <p>El disco de "Entre Lienzos y Acordes" captura la esencia emocional de la historia a través de composiciones originales que exploran diferentes géneros musicales, desde piezas ambientales hasta rock alternativo.</p>
+                    <h4 data-translate="elya.albumTitle">Álbum musical</h4>
+                    <p data-translate="elya.albumDescription">El disco de "Entre Lienzos y Acordes" captura la esencia emocional de la historia a través de composiciones originales que exploran diferentes géneros musicales, desde piezas ambientales hasta rock alternativo.</p>
                     
-                    <h5>Anticipación del álbum:</h5>
+                    <h5 data-translate="elya.albumAnticipation">Anticipación del álbum:</h5>
                     <div class="feature-list">
                         <div class="feature-item">
                             <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"><path fill="currentColor" d="M19.24 4.758a10.24 10.24 0 1 0 3 7.25a10.2 10.2 0 0 0-3-7.25M12 19.438a7.44 7.44 0 0 1-5.83-2.81a.75.75 0 0 1 1.17-.93a6 6 0 0 0 2.07 1.65a6 6 0 0 0 2.59.59a.75.75 0 1 1 0 1.5m0-4.31a3.12 3.12 0 1 1 0-6.24a3.12 3.12 0 0 1 0 6.24m6.61-4.3a.8.8 0 0 1-.22 0a.74.74 0 0 1-.71-.53a5.93 5.93 0 0 0-3.91-4a.75.75 0 0 1 .45-1.43a7.35 7.35 0 0 1 3.07 1.88a7.45 7.45 0 0 1 1.82 3.1a.74.74 0 0 1-.5 1.01z"/></svg></div>
                             <div class="feature-text">
-                                <div class="feature-title">10 canciones originales</div>
-                                <div class="feature-description">Divididas en dos secciones temáticas que complementan la narrativa. Las canciones de fondo y las cantadas por la banda.</div>
+                                <div class="feature-title" data-translate="elya.feature1Title">10 canciones originales</div>
+                                <div class="feature-description" data-translate="elya.feature1Description">Divididas en dos secciones temáticas que complementan la narrativa. Las canciones de fondo y las cantadas por la banda.</div>
                             </div>
                         </div>
                         <div class="feature-item">
                             <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"><path fill="currentColor" d="m12 21.35l-1.45-1.32C5.4 15.36 2 12.27 2 8.5C2 5.41 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.08C13.09 3.81 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53z"/></svg></div>
                             <div class="feature-text">
-                                <div class="feature-title">Canciones de personajes</div>
-                                <div class="feature-description">Piezas que reflejan las vivencias Ruby, Aura y Nico en la historia.</div>
+                                <div class="feature-title" data-translate="elya.feature2Title">Canciones de personajes</div>
+                                <div class="feature-description" data-translate="elya.feature2Description">Piezas que reflejan las vivencias Ruby, Aura y Nico en la historia.</div>
                             </div>
                         </div>
                         <div class="feature-item">
                             <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 512 512"><path fill="currentColor" d="M196.56 318.381L138.49 352L256 420.032L373.51 352l-58.07-33.619l21.335-36.95L458.667 352L256 469.333L53.334 352l121.891-70.569z"/><path fill="currentColor" fill-rule="evenodd" d="m231.367 335.999l6.158 10.667L256 378.667l18.475-32.001l6.159-10.667c26.635-46.132 66.14-114.553 72.379-125.326C362.56 194.187 368 175.07 368 154.667c0-61.856-50.144-112-112-112s-112 50.144-112 112c0 20.403 5.44 39.52 14.987 56.006c6.239 10.773 45.745 79.194 72.38 125.326M256 293.333c-25.12-43.508-54.745-94.811-60.09-104.042Zm0 0c25.121-43.509 54.747-94.814 60.091-104.042c5.874-10.144 9.242-21.908 9.242-34.624c0-38.292-31.041-69.334-69.333-69.334s-69.333 31.042-69.333 69.334c0 12.716 3.368 24.48 9.243 34.624" clip-rule="evenodd"/><path fill="currentColor" d="M293.333 149.333c0 20.619-16.714 37.334-37.333 37.334c-20.618 0-37.333-16.715-37.333-37.334C218.667 128.715 235.382 112 256 112c20.619 0 37.333 16.715 37.333 37.333"/></svg></div>
                             <div class="feature-text">
-                                <div class="feature-title">Música ambiental</div>
-                                <div class="feature-description">Composiciones instrumentales que acompañan momentos clave de la historia.</div>
+                                <div class="feature-title" data-translate="elya.feature3Title">Música ambiental</div>
+                                <div class="feature-description" data-translate="elya.feature3Description">Composiciones instrumentales que acompañan momentos clave de la historia.</div>
                             </div>
                         </div>
                     </div>
                 </section>
-                <p>Salida prevista en: <strong>Febrero 2026</strong></p>
+                <p class="date"><span data-translate="elya.expectedRelease">Salida prevista en:</span> <strong data-translate="elya.releaseDate.album">Febrero 2026</strong></p>
                 <div class="button-container">
-                    <button disabled class="download-button">No disponible</button>
+                    <button disabled class="download-button" data-translate="elya.notAvailable">No disponible</button>
                 </div>
             </section>
 
@@ -130,43 +189,43 @@
             <section id="juego" class="download-game project-section2">
                 <h3>✿ㅤDemo del Videojuegoㅤ♤</h3>
                 <section class="project-section3">
-                    <h4>Experiencia interactiva</h4>
-                    <p>La demo de "Entre Lienzos y Acordes" ofrece una ventana interactiva al universo de Ruby y Aura, permitiendo a los jugadores sumergirse en su historia a través de una experiencia multimedia que combina mundo abierto, música original y narración.</p>
-                    
-                    <h5>Características previstas:</h5>
+                    <h4 data-translate="elya.gameTitle">Experiencia interactiva</h4>
+                    <p data-translate="elya.gameDescription">La demo de "Entre Lienzos y Acordes" ofrece una ventana interactiva al universo de Ruby y Aura, permitiendo a los jugadores sumergirse en su historia a través de una experiencia multimedia que combina mundo abierto, música original y narración.</p>
+
+                    <h5 data-translate="elya.gameFeatures">Características previstas:</h5>
                     <div class="feature-list">
                         <div class="feature-item">
                             <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M20.75 16.714a1 1 0 0 1-.014.143a.75.75 0 0 1-.736.893H6a1.25 1.25 0 1 0 0 2.5h14a.75.75 0 0 1 0 1.5H6A2.75 2.75 0 0 1 3.25 19V5A2.75 2.75 0 0 1 6 2.25h13.4c.746 0 1.35.604 1.35 1.35zM9 6.25a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5z" clip-rule="evenodd"/></svg></div>
                             <div class="feature-text">
-                                <div class="feature-title">Narrativa fiel</div>
-                                <div class="feature-description">Historia fiel a la novela con personajes y escenarios reconocibles.</div>
+                                <div class="feature-title" data-translate="elya.gameFeature1Title">Narrativa fiel</div>
+                                <div class="feature-description" data-translate="elya.gameFeature1Description">Historia fiel a la novela con personajes y escenarios reconocibles.</div>
                             </div>
                         </div>
                         <div class="feature-item">
                             <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"><g fill="none"><path d="m12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036q-.016-.004-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="m17.956 2.169l.111.055l.866.5a1 1 0 0 1 .488 1.02l-.026.12l-.567 1.983a1 1 0 0 1-1.344.649l-.118-.058l-1.534 2.656c.92.721 1.369 1.493 1.674 2.213c.223.523.414 1.205.306 1.939c-.105.712-.477 1.362-1.14 1.888l-.189.14c-.433.305-.44.657-.328 1.097l.105.383c.183.688.401 1.764.072 3.01c-.276 1.043-.943 1.865-1.7 2.411c-.745.538-1.666.871-2.538.826c-1.36-.07-2.749-.41-4.594-1.475s-2.834-2.098-3.574-3.24c-.475-.733-.647-1.698-.554-2.612c.094-.928.473-1.917 1.238-2.677c.784-.779 1.66-1.147 2.328-1.352l.315-.091l.272-.07c.524-.134.799-.233.88-.73l.017-.134c.085-.951.478-1.677 1.093-2.165c.58-.46 1.268-.635 1.832-.704c.712-.087 1.521-.092 2.486.243l.267.1l1.534-2.656a1 1 0 0 1-.303-1.461l.084-.1l1.433-1.482a1 1 0 0 1 1.108-.226M11.59 9.736c-.38.047-.656.147-.833.287c-.126.1-.266.269-.325.63l-.017.144c-.065.732-.296 1.336-.734 1.791c-.416.432-.957.638-1.516.796l-.569.156c-.536.155-1.061.363-1.576.875c-.381.379-.602.908-.659 1.462c-.057.568.068 1.051.243 1.32c.558.862 1.308 1.68 2.896 2.597s2.672 1.157 3.697 1.21c.32.016.802-.117 1.265-.45c.452-.326.799-.782.936-1.301c.186-.702.104-1.261-.03-1.803l-.094-.36c-.17-.631-.31-1.274-.124-1.921c.155-.54.495-.997.991-1.388l.194-.144c.38-.266.472-.504.499-.683c.033-.223-.018-.512-.168-.865c-.234-.55-.557-1.117-1.432-1.679l-.197-.12l-.074-.043c-1.034-.588-1.737-.589-2.373-.511m-1.523 6.344l.866.5a1 1 0 1 1-1 1.732l-.866-.5a1 1 0 1 1 1-1.732m2.683-3.647a1.5 1.5 0 0 1 .615 1.92l-.066.129a1.5 1.5 0 0 1-2.67-1.363l.072-.137a1.5 1.5 0 0 1 2.05-.55Z"/></g></svg></div>
                             <div class="feature-text">
-                                <div class="feature-title">Minijuegos musicales</div>
-                                <div class="feature-description">La banda sonora original se integra de forma dinámica incluso dejando al jugador pudiendo tocarla.</div>
+                                <div class="feature-title" data-translate="elya.gameFeature2Title">Minijuegos musicales</div>
+                                <div class="feature-description" data-translate="elya.gameFeature2Description">La banda sonora original se integra de forma dinámica incluso dejando al jugador pudiendo tocarla.</div>
                             </div>
                         </div>
                         <div class="feature-item">
                             <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"><path fill="currentColor" d="M12 22q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22m0-2q3.35 0 5.675-2.325T20 12q0-.175-.012-.363t-.013-.312q-.125.725-.675 1.2T18 13h-2q-.825 0-1.412-.587T14 11v-1h-4V8q0-.825.588-1.412T12 6h1q0-.575.313-1.012t.762-.713q-.5-.125-1.012-.2T12 4Q8.65 4 6.325 6.325T4 12h5q1.65 0 2.825 1.175T13 16v1h-3v2.75q.5.125.988.188T12 20"/></svg></div>
                             <div class="feature-text">
-                                <div class="feature-title">Exploración abierta</div>
-                                <div class="feature-description">Mundo explorable y ampliación de la historia.</div>
+                                <div class="feature-title" data-translate="elya.gameFeature3Title">Exploración abierta</div>
+                                <div class="feature-description" data-translate="elya.gameFeature3Description">Mundo explorable y ampliación de la historia.</div>
                             </div>
                         </div>
                     </div>
                 </section>
-                <p>Salida prevista en: <strong>Julio 2026</strong></p>
+                <p class="date"><span data-translate="elya.expectedRelease">Salida prevista en:</span> <strong data-translate="elya.releaseDate.game">Julio 2026</strong></p>
                 <div class="button-container">
-                    <button disabled class="download-button">No disponible</button>
+                    <button disabled class="download-button" data-translate="elya.notAvailable">No disponible</button>
                 </div>
             </section>
         </section>
 
         <section class="soon project-section">
-            <h4>Próximamente...</h4>
+            <h4><span data-translate="elya.comingSoon">Próximamente...</span></h4>
         </section>
     </main>
 
@@ -185,8 +244,14 @@
                 <a href="https://www.linkedin.com/in/albert-sánchez-santed-26a1b3304/" target="_blank" class="social-icon" id="linkedin">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37z"/></svg>
                 </a>
+                <a href="https://github.com/Meliory" target="_blank" class="social-icon" id="github">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 0C5.374 0 0 5.373 0 12 0 17.302 3.438 21.8 8.207 23.387c.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                </a>
             </div>
-            <p class="copyright">© 2024 Albert Sánchez. Todos los derechos reservados.</p>
+            <p class="footer-contact" data-translate="common.contact">📧 Contacto: <a href="mailto:asanchezsa04@gmail.com">asanchezsa04@gmail.com</a></p>
+            <p class="copyright" data-translate="common.copyright">© 2024 Albert Sánchez. Todos los derechos reservados.</p>
         </div>
     </footer>
 

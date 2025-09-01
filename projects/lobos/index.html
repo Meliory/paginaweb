@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <script type="module" src="script.js"></script>
+        <title>Hombres Lobo</title>
+    </head>
+    <body>
+        <div id="mainScreen" class="screen active">
+            <h1>Hombres Lobo</h1>
+            <div class="game-container">
+                <div class="menu-buttons">
+                    <button onclick="showcreateLobbyScreen()">Crear Partida</button>
+                    <button onclick="showjoinLobbyScreen()">Unirse a Partida</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="createLobbyScreen" class="screen">
+            <button class="back-btn" onclick="showMainMenu()">← Volver</button>
+            <h2>Crear Partida</h2>
+            <div id="createLobbyError" class="error-message" hidden></div>
+            <div class="game-container">
+                <input type="text" id="hostName" placeholder="Introduce tu nombre" maxlength="20">
+                <button onclick="createLobby()">Crear</button>
+            </div>
+        </div>
+
+        <div id="joinLobbyScreen" class="screen">
+            <button class="back-btn" onclick="showMainMenu()">← Volver</button>
+            <h2>Unirse a Partida</h2>
+            <div id="joinLobbyError" class="error-message" hidden></div>
+            <div class="game-container">
+                <input type="text" id="playerName" placeholder="Introduce tu nombre" maxlength="20">
+                <input type="text" id="gameCode" placeholder="Código de sala" maxlength="6" style="text-transform: uppercase;">
+                <button onclick="joinLobby()">Unirse</button>
+            </div>
+        </div>
+
+        <div id="lobbyScreen" class="screen">
+            <button class="back-btn" onclick="leaveLobby()">Salir de la Partida</button>
+            <h2>Sala de Espera</h2>
+            <div id="inLobbyError" class="error-message" hidden></div>
+            <div id="gameCodeDisplay" class="game-code"></div>
+            <div id="playersList" class="players-list"></div>
+            <div id="playerCount"></div>
+
+            <div id="hostConfigurationLobby" hidden>
+                <button id="startGameButton" onclick="startGame()">Iniciar Juego</button>
+                <div id="gameConfiguration">
+                    <div id="rolesCount" class="roles-count-header"></div>
+                    <div id="roleWarning" class="role-warning" hidden></div>
+                    
+                    <div id="alguacilConfiguration">
+                        <label>
+                            <span>Alguacil</span>
+                            <input type="checkbox" id="alguacilCheckbox" onclick="toggleRole('alguacil')" checked>
+                        </label>
+                    </div>
+                    <div id="aldeanoConfiguration">
+                        <p>Aldeanos:</p>
+                        <button id="aldeanoRemoveButton" onclick="removeRole('aldeano')">-</button>
+                        <p id="aldeanoCount">0</p>
+                        <button id="aldeanoAddButton" onclick="addRole('aldeano')">+</button>
+                    </div>
+                    <div id="loboConfiguration">
+                        <p>Lobos:</p>
+                        <button id="loboRemoveButton" onclick="removeRole('lobo')">-</button>
+                        <p id="loboCount">0</p>
+                        <button id="loboAddButton" onclick="addRole('lobo')">+</button>
+                    </div>
+                    <div id="brujaConfiguration">
+                        <label>
+                            <span>Bruja</span>
+                            <input type="checkbox" id="brujaCheckbox" onclick="toggleRole('bruja')">
+                        </label>
+                    </div>
+                    <div id="cazadorConfiguration">
+                        <label>
+                            <span>Cazador</span>
+                            <input type="checkbox" id="cazadorCheckbox" onclick="toggleRole('cazador')">
+                        </label>
+                    </div>
+                    <div id="cupidoConfiguration">
+                        <label>
+                            <span>Cupido</span>
+                            <input type="checkbox" id="cupidoCheckbox" onclick="toggleRole('cupido')">
+                        </label>
+                    </div>
+                    <div id="niñaConfiguration">
+                        <label>
+                            <span>Niña</span>
+                            <input type="checkbox" id="niñaCheckbox" onclick="toggleRole('niña')">
+                        </label>
+                    </div>
+                    <div id="videnteConfiguration">
+                        <label>
+                            <span>Vidente</span>
+                            <input type="checkbox" id="videnteCheckbox" onclick="toggleRole('vidente')">
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="roleAssignScreen" class="screen">
+            <div id="preGameError" class="error-message" hidden></div>
+            <div id="playersWait" hidden></div>
+            <div id="hostWait" hidden></div>
+            <div id="hostConfigurationRoles" hidden></div>
+            <div id="roleReveal" hidden>
+            </div>
+            <div id="alguacilAssign" hidden></div>
+            <div id="alguacilShow" hidden></div>
+        </div>
+
+        <div id="playerGameScreen" class="screen">
+            <div id="nightScreen"></div>
+            <div id="dayScreen"></div>
+            <div id="deathScreen"></div>
+            <div id="voteScreen"></div>
+            <div id="playerDeadScreen"></div>
+            <div id="playerGameEndScreen"></div>
+        </div>
+
+        <div id="hostGameScreen" class="screen">
+            <div id="inGameError" class="error-message" hidden></div>
+            <div id="cupidoAssignScreen"></div>
+            <div id="videnteAssignScreen"></div>
+            <div id="loboAssignScreen"></div>
+            <div id="brujaAssignScreen"></div>
+            <div id="amanecerDiaScreen"></div>
+            <div id="muerteScreen"></div>
+            <div id="votacionScreen"></div>
+            <div id="ganadorScreen"></div>
+        </div>
+    </body>
+</html>

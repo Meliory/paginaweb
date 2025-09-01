@@ -213,7 +213,6 @@
     
     .main-project-card {
         flex-direction: column;
-        text-align: center;
     }
 }
 
@@ -228,12 +227,10 @@
 
     .about-summary {
         flex-direction: column;
-        text-align: center;
         gap: 2rem;
     }
     
     .about-text p, .intro-text {
-        text-align: center;
     }
 
     .profile-image {
