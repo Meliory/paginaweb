@@ -2,7 +2,8 @@ const TRANSLATIONS = {
     es: {
         nav: {
             about: "Sobre mí",
-            projects: "Proyectos", 
+            projects: "Proyectos",
+            elya: "Entre Lienzos y Acordes",
             contact: "Contacto"
         },
         home: {
@@ -28,7 +29,7 @@ const TRANSLATIONS = {
             historyIntro: "¡Hola! Soy Albert Sánchez, también conocido en internet como Meliory o Mel. Tengo 21 años, estudio Diseño y Desarrollo de Videojuegos y vivo en Girona, España.",
             historyText1: "Soy un programador de videojuegos y compositor musical. Me gusta aprender y ser creativo, programar las cosas que me vienen en mente o plasmar en la música diferentes emociones que puedo sentir. Además, de vez en cuando, me gusta escribir alguna historia o interpretar algún personaje.",
             historyText2: "Siempre he sido un fanático de los videojuegos indie, llenos de historia y sentimiento; aquellos que me hacen pensar o me hacen pasar un buen rato. Juegos de puzzles, narrativos o interactivos son algunos de mis favoritos.",
-            historyText3: "A nivel músical toco la guitarra desde los 12 años, siendo la rumba, cantautor, rock español y rock japonés mis géneros favoritos. También toco un poco el piano y el cajón flamenco.",
+            historyText3: "A nivel músical toco la guitarra desde los 7 años, siendo la rumba, cantautor, rock español y rock japonés mis géneros favoritos. También toco un poco el piano y el cajón flamenco.",
             historyText4: "Finalmente, soy administrador del grupo KILAM, un grupo de creación de eventos de Minecraft para comunidades y streamers.",
             techSkillsTitle: "Conocimientos técnicos",
             engines: "Motores",
@@ -49,7 +50,7 @@ const TRANSLATIONS = {
             subtitle: "Listado de mis proyectos en videojuegos, aplicaciones, y más...",
             featured: "Proyecto Destacado",
             universitySectionTitle: "Proyectos Universitarios",
-            personalSectionTitle: "Proyectos Personales",
+            personalSectionTitle: "Proyectos Personales y Conjuntos",
             categories: {
                 games: "Videojuegos",
                 music: "Música", 
@@ -74,6 +75,23 @@ const TRANSLATIONS = {
                 learn: "Saber más"
             }
         },
+        contact: {
+            title: "Contacto",
+            subtitle: "Conectemos y hagamos realidad esas ideas creativas",
+            primaryTitle: "Correo principal",
+            primaryDescription: "Para consultas profesionales, colaboraciones o cualquier pregunta sobre mis proyectos.",
+            professionalTitle: "Contacto profesional",
+            professionalDescription: "Conecta conmigo para oportunidades laborales y networking profesional.",
+            socialTitle: "Sígueme en redes sociales",
+            socialDescription: "Mantente al día con mis últimos proyectos, música y contenido creativo.",
+            responseTime: "Tiempo de respuesta: 24-48 horas",
+            github: "Repositorios y código",
+            email: "Correo electrónico",
+            linkedin: "Perfil profesional",
+            instagram: "Contenido personal",
+            twitter: "Actualizaciones rápidas",
+            spotify: "Mi música"
+        },
         common: {
             loading: "Cargando...",
             error: "Error al cargar el contenido",
@@ -88,7 +106,7 @@ const TRANSLATIONS = {
             english: "English",
             exploreProject: "Explorar proyecto →",
             contact: "📧 Contacto: asanchezsa04@gmail.com",
-            copyright: "© 2024 Albert Sánchez. Todos los derechos reservados."
+            copyright: "© 2025 Albert Sánchez. Todos los derechos reservados."
         },
         error404: {
             title: "Página no encontrada",
@@ -214,13 +232,13 @@ const TRANSLATIONS = {
     ca: {
         nav: {
             about: "Sobre mi",
-            projects: "Projectes", 
+            projects: "Projectes",
+            elya: "Entre Lienzos y Acordes",
             contact: "Contacte"
         },
         home: {
             title: "Albert Sánchez",
             subtitle: "Programador de videojocs, compositor i escriptor",
-            description: "Benvingut al meu portfolio digital on exploro la intersecció entre tecnologia, música i narrativa.",
             aboutSection: "Sobre mi",
             aboutIntro: "Hola! Sóc l'Albert, també conegut com Meliory o Mel. Tinc 21 anys, estudio Disseny i Desenvolupament de Videojocs i visc a Girona, Espanya.",
             aboutText: "Sóc un programador de videojocs i compositor musical. M'agrada aprendre i ser creatiu, programar les coses que em venen al cap o plasmar en la música diversos significats. A més, he escrit i publicat la meva primera novel·la \"Entre Lienzos y Acordes\".",
@@ -240,7 +258,7 @@ const TRANSLATIONS = {
             historyIntro: "Hola! Sóc l'Albert Sánchez, també conegut a internet com Meliory o Mel. Tinc 21 anys, estudio Disseny i Desenvolupament de Videojocs i visc a Girona, Espanya.",
             historyText1: "Sóc un programador de videojocs i compositor musical. M'agrada aprendre i ser creatiu, programar les coses que em venen al cap o plasmar en la música diferents emocions que puc sentir. A més, de tant en tant, m'agrada escriure alguna història o interpretar algun personatge.",
             historyText2: "Sempre he estat un fanàtic dels videojocs indie, plens d'història i sentiment; aquells que em fan pensar o em fan passar una bona estona. Jocs de puzles, narratius o interactius són alguns dels meus favorits.",
-            historyText3: "A nivell musical toco la guitarra des dels 12 anys, sent la rumba, cantautor, rock espanyol i rock japonès els meus gèneres favorits. També toco una mica el piano i el cajón flamenc.",
+            historyText3: "A nivell musical toco la guitarra des dels 7 anys, sent la rumba, cantautor, rock espanyol i rock japonès els meus gèneres favorits. També toco una mica el piano i el cajón flamenc.",
             historyText4: "Finalment, sóc administrador del grup KILAM, un grup de creació d'esdeveniments de Minecraft per a comunitats i streamers.",
             techSkillsTitle: "Coneixements tècnics",
             engines: "Motors",
@@ -261,17 +279,12 @@ const TRANSLATIONS = {
             subtitle: "Llistat dels meus projectes en videojocs, aplicacions, i més...",
             featured: "Projecte Destacat",
             universitySectionTitle: "Projectes Universitaris",
-            personalSectionTitle: "Projectes Personals",
+            personalSectionTitle: "Projectes Personals i Conjunts",
             categories: {
                 games: "Videojocs",
                 music: "Música", 
                 writing: "Escriptura",
                 web: "Desenvolupament Web"
-            },
-            status: {
-                inProgress: "En Desenvolupament",
-                completed: "Completat",
-                released: "Publicat"
             },
             elya: {
                 title: "Entre Lienzos y Acordes",
@@ -285,6 +298,23 @@ const TRANSLATIONS = {
                 ],
                 learn: "Saber més"
             }
+        },
+        contact: {
+            title: "Contacte",
+            subtitle: "Connectem i fem realitat aquestes idees creatives",
+            primaryTitle: "Correu principal",
+            primaryDescription: "Per a consultes professionals, col·laboracions o qualsevol pregunta sobre els meus projectes.",
+            professionalTitle: "Contacte professional",
+            professionalDescription: "Connecta amb mi per a oportunitats laborals i networking professional.",
+            socialTitle: "Segueix-me a les xarxes socials",
+            socialDescription: "Mantén-te al dia amb els meus últims projectes, música i contingut creatiu.",
+            responseTime: "Temps de resposta: 24-48 hores",
+            github: "Repositoris i codi",
+            email: "Correu electrònic",
+            linkedin: "Perfil professional",
+            instagram: "Contingut personal",
+            twitter: "Actualitzacions ràpides",
+            spotify: "La meva música"
         },
         common: {
             loading: "Carregant...",
@@ -300,11 +330,11 @@ const TRANSLATIONS = {
             english: "English",
             exploreProject: "Explorar projecte →",
             contact: "📧 Contacte: asanchezsa04@gmail.com",
-            copyright: "© 2024 Albert Sánchez. Tots els drets reservats."
+            copyright: "© 2025 Albert Sánchez. Tots els drets reservats."
         },
         error404: {
             title: "Pàgina no trobada",
-            message: "Sembla que aquesta pàgina s'ha perdut a l'espai. Potser estigui buscant alguna estrella fugaç o un nou albada...",
+            message: "Sembla que aquesta pàgina s'ha perdut a l'espai. Potser estigui buscant alguna estrella fugaç o una nova albada...",
             btnHome: "Tornar a l'inici",
             btnProjects: "Veure projectes",
             suggestionsTitle: "Què pots fer?",
@@ -396,7 +426,7 @@ const TRANSLATIONS = {
             soon: "Pròximament",
             notAvailable: "No disponible",
             priceNote: "*El preu pot variar segons la política d'Amazon, a més que l'enviament no està inclòs.",
-            soundtrackTitle: "𝄞 ㅤSoundtrack Originalㅤ ♪",
+            soundtrackTitle: "𝄞ㅤSoundtrack Originalㅤ♪",
             albumTitle: "Àlbum musical",
             albumDescription: "El disc d'\"Entre Lienzos y Acordes\" captura l'essència emocional de la història a través de composicions originals que exploren diferents gèneres musicals, des de peces ambientals fins a rock alternatiu.",
             albumAnticipation: "Anticipació de l'àlbum:",
@@ -426,7 +456,8 @@ const TRANSLATIONS = {
     en: {
         nav: {
             about: "About me",
-            projects: "Projects", 
+            projects: "Projects",
+            elya: "Entre Lienzos y Acordes",
             contact: "Contact"
         },
         home: {
@@ -452,7 +483,7 @@ const TRANSLATIONS = {
             historyIntro: "Hello! I'm Albert Sánchez, also known online as Meliory or Mel. I'm 21 years old, studying Game Design and Development and living in Girona, Spain.",
             historyText1: "I'm a game programmer and music composer. I like to learn and be creative, programming the things that come to mind or expressing different emotions I can feel in music. Additionally, from time to time, I like to write some story or play some character.",
             historyText2: "I've always been a fan of indie games, full of story and feeling; those that make me think or make me have a good time. Puzzle, narrative or interactive games are some of my favorites.",
-            historyText3: "Musically, I've been playing guitar since I was 12, with rumba, singer-songwriter, Spanish rock and Japanese rock being my favorite genres. I also play a bit of piano and flamenco cajón.",
+            historyText3: "Musically, I've been playing guitar since I was 7, with rumba, singer-songwriter, Spanish rock and Japanese rock being my favorite genres. I also play a bit of piano and flamenco cajón.",
             historyText4: "Finally, I'm an administrator of the KILAM group, a group that creates Minecraft events for communities and streamers.",
             techSkillsTitle: "Technical skills",
             engines: "Engines",
@@ -473,7 +504,7 @@ const TRANSLATIONS = {
             subtitle: "List of my projects in games, applications, and more...",
             featured: "Featured Project",
             universitySectionTitle: "University Projects",
-            personalSectionTitle: "Personal Projects",
+            personalSectionTitle: "Personal Projects and Collaborations",
             categories: {
                 games: "Games",
                 music: "Music", 
@@ -498,6 +529,23 @@ const TRANSLATIONS = {
                 learn: "Learn more"
             }
         },
+        contact: {
+            title: "Contact",
+            subtitle: "Let's connect and make those creative ideas come true",
+            primaryTitle: "Main email",
+            primaryDescription: "For professional inquiries, collaborations or any questions about my projects.",
+            professionalTitle: "Professional contact",
+            professionalDescription: "Connect with me for job opportunities and professional networking.",
+            socialTitle: "Follow me on social media",
+            socialDescription: "Stay up to date with my latest projects, music and creative content.",
+            responseTime: "Response time: 24-48 hours",
+            github: "Repositories and code",
+            email: "Email",
+            linkedin: "Professional profile",
+            instagram: "Personal content",
+            twitter: "Quick updates",
+            spotify: "My music"
+        },
         common: {
             loading: "Loading...",
             error: "Error loading content",
@@ -512,7 +560,7 @@ const TRANSLATIONS = {
             english: "English",
             exploreProject: "Explore project →",
             contact: "📧 Contact: asanchezsa04@gmail.com",
-            copyright: "© 2024 Albert Sánchez. All rights reserved."
+            copyright: "© 2025 Albert Sánchez. All rights reserved."
         },
         error404: {
             title: "Page not found",

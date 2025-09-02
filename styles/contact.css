@@ -1,0 +1,158 @@
+/* ===========================================
+   PÁGINA DE CONTACTO - ESTILOS ESPECÍFICOS
+   =========================================== */
+
+.contact-subtitle {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 0.5rem;
+    font-weight: 300;
+}
+
+
+/* Grid de contacto */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Tarjetas de contacto */
+.contact-card {
+    background-color: var(--color-blue-zone3);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    transition: all var(--transition-speed);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, var(--color-purple), var(--color-green));
+}
+
+.contact-card h3 {
+    color: var(--accent-color);
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.contact-card p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.contact-card a {
+    cursor: pointer;
+}
+
+/* Grid de redes sociales */
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+}
+
+.social-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--color-blue-zone4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.9);
+    transition: all var(--transition-speed);
+}
+
+.social-item:hover {
+    border-color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+.social-item svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+    flex-shrink: 0;
+}
+
+.social-info h4 {
+    margin: 0;
+    font-size: 1rem;
+    color: white;
+}
+
+.social-info span {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Iconos para las tarjetas */
+.contact-icon {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .contact-card.primary {
+        grid-column: 1 / -1;
+    }
+    
+    .professional-links {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .contact-subtitle {
+        font-size: 1rem;
+    }
+    
+    .contact-card {
+        padding: 1.5rem;
+    }
+    
+    .email-button {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .professional-links {
+        flex-direction: column;
+    }
+    
+    .professional-link {
+        justify-content: center;
+    }
+    
+    .social-grid {
+        grid-template-columns: 1fr;
+    }
+}
