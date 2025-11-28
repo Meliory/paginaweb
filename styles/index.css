@@ -2,6 +2,91 @@
    ESTILOS ESPECÍFICOS PÁGINA PRINCIPAL
    ================= */
 
+/* News Banner */
+.news-banner {
+    background: linear-gradient(135deg, var(--color-orange) 0%, var(--color-yellow) 100%);
+    border-top: 3px solid var(--color-yellow);
+    border-bottom: 3px solid var(--color-orange);
+    padding: 1.2rem 0;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 20px rgba(255, 170, 51, 0.4);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.news-banner:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(255, 170, 51, 0.6);
+}
+
+.news-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    animation: shine 3s infinite;
+}
+
+@keyframes shine {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+.news-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 1.1rem;
+}
+
+.news-label {
+    color: var(--color-blue-zone1);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    padding: 0.3rem 0.8rem;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+}
+
+.news-separator {
+    color: var(--color-blue-zone1);
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.news-text {
+    color: var(--color-blue-zone1);
+    font-weight: 600;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .news-banner {
+        padding: 1rem 0;
+    }
+
+    .news-content {
+        font-size: 0.95rem;
+        gap: 0.7rem;
+        flex-wrap: wrap;
+    }
+
+    .news-label {
+        padding: 0.2rem 0.6rem;
+    }
+}
+
 /* Hero Section */
 .hero-section {
     text-align: center;
