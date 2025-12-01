@@ -1,0 +1,23 @@
+name: Deploy to Hostinger via FTP
+on:
+  push:
+    branches:
+      - main  # o la rama que uses
+
+jobs:
+  ftp-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Deploy files to Hostinger
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: 46.202.172.188
+          username: u714466871
+          password: AlbertPutisimoAmo2! 
+          server-dir: ./
+
+
+#https://udg.albertsanchez.es/public/
